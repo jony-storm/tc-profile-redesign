@@ -1,10 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, { FC, ReactElement } from 'react';
+import ProfilePage from './pages/profile/Profile';
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
-function App() {
+const App: FC<any> = () : ReactElement => {
   return (
     <div className="App">
-     <h1>Hello World I'm using TypeScript for the first time!</h1>
+      <Navbar />
+      <ProfilePage />
+      <Footer />
     </div>
   );
 }

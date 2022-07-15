@@ -1,0 +1,19 @@
+.content {
+    padding: 20px 0px;
+}
+
+.save-changes {
+    padding: 12px 24px;
+    color: white;
+    background-color: #137D60;
+    border: none;
+    border-radius: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+    float: right;
+    margin: 20px 0;
+}
+
+.save-changes:focus {
+    outline: none;
+}
