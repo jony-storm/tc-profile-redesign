@@ -1,37 +1,50 @@
 import React, { FC, ReactElement, useState } from "react";
 import "./tablist.css";
+import Profile from "../tabs/profile/ProfileTab";
 
 const TabList: FC<any> = (): ReactElement => {
   const [tabs, setTabs] = useState<any>([
     {
-      name: "profile",
+      title: "profile",
+      componentName: "ProfileTab",
+      link: "/profile_settings#profile",
       activeTab: true,
       id: "profile",
     },
 
     {
-      name: "experience & skills",
+      title: "experience & skills",
+      componentName: "ExperienceAndSkillsTab",
+      link: "/profile_settings#experience-and-skills",
       activeTab: false,
-      id: "experience-skills",
+      id: "experience-and-skills",
     },
 
     {
-      name: "topcoder & you",
+      title: "topcoder & you",
+      componentName: "TopcoderAndYouTab",
+      link: "/profile_settings#topcoder-and-you",
       activeTab: false,
-      id: "topcoder-you",
+      id: "topcoder-and-you",
     },
     {
-      name: "tools",
+      title: "tools",
+      componentName: "ToolsTab",
+      link: "/profile_settings#tools",
       activeTab: false,
       id: "tools",
     },
     {
-      name: "accounts",
+      title: "accounts",
+      componentName: "AccountsTab",
+      link: "/profile_settings#accounts",
       activeTab: false,
       id: "accounts",
     },
     {
-      name: "preferences",
+      title: "preferences",
+      componentName: "PreferencesTab",
+      link: "/profile_settings#preferences",
       activeTab: false,
       id: "preferences",
     },
@@ -61,7 +74,7 @@ const TabList: FC<any> = (): ReactElement => {
       return tab.activeTab === true 
     })[0]
     
-    return activeTab.name + "-tab"
+    return `<${activeTab.componentName} />`
   };
 
   return (
@@ -70,13 +83,13 @@ const TabList: FC<any> = (): ReactElement => {
       <ul className="tab-list">
         { tabs.map((tab: any) => {
           return(
-            <li className={tab.activeTab ? "active" : "not-active"} key={tab.id}>
+            <li className={tab.activeTab ? "active" : ""} key={tab.id}>
             <a
               onClick={handleClick}
-              href="/profile_settings/#${tab.name}"
+              href={tab.link}
               id={tab.id}
             >
-              {tab.name}
+              {tab.title}
             </a>
           </li>)
           })

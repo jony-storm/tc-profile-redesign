@@ -8,17 +8,17 @@
   border-top-right-radius: 6px;
   background-color: #eaf6fd;
   font-size: 12px;
-  position: relative;
   margin-bottom: 30px;
+  position: relative;
 }
 
-.tab-list li.not-active {
+.tab-list li {
   padding: 15px 13px;
   list-style: none;
   text-align: center;
 }
 
-.tab-list li.not-active a {
+.tab-list li a {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -27,24 +27,19 @@
     color: #485258;
 }
 
-.tab-list li.not-active:hover {
+.tab-list li:hover {
   background: #bae1f9;
   font-weight: bold;
 }
 
-.tab-list li.not-active:first-child:hover {
+.tab-list li:first-child:hover {
   background: #bae1f9;
   color: #485258;
   font-weight: bold;
   border-top-left-radius: 6px;
 }
 
-
-.tab-list li.active {
-  background-color: #bae1f9;
-}
-
-.tab-list li.active:after {
+.tab-list li#expand:after {
     content: "";
     background-image: url('/public/assets/down.svg');
     height: 10px;
@@ -54,6 +49,10 @@
     position: absolute;
     top: 44px;
     left: 20px;
+}
+
+#dark-bg {
+  background-color: #bae1f9;
 }
 
 .tab-body {

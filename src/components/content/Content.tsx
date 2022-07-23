@@ -1,6 +1,6 @@
 import React, { FC, ReactElement} from 'react';
 import './content.css';
-//import TabList from '../tablist/TabList';
+// import TabList from '../tablist_mine/TabList';
 import TabList from '../newtab/TabList';
 
 
